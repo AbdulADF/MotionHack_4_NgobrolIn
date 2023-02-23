@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login Account"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:textSize="13sp"
+        android:text="Please enter your mobile number &amp; your account password that
+has been registered to enter the application."
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/phone_login"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="38dp"
+        android:hint="+62 | Enter your phone number"
+        android:inputType="text"
+        android:background="@drawable/boxtext"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="9dp"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:background="@drawable/boxtext"/>
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="9dp"
+        android:text="Login" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="end">
+
+        <TextView
+            android:id="@+id/forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="Forgot Password?"
+            android:textStyle="bold"
+            android:textSize="13dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/when_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:textAlignment="center"
+            android:text="When login, you will agree to the ...  Service Terms &amp; acknowledge
+that our Privacy Notice applies."/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/dont_have_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:textStyle="bold"
+            android:text="Don’t have an account yet?"/>
+
+        <TextView
+            android:id="@+id/sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="2sp"
+            android:layout_alignEnd="@+id/dont_have_account"
+            android:textStyle="bold"
+            android:text="Register Here" />
+    </LinearLayout>
+
+
+</LinearLayout>
