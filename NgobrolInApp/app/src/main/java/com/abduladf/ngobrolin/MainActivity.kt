@@ -26,7 +26,13 @@ class MainActivity : AppCompatActivity() {
         dinotisService.getUser().enqueue(object : Callback<ApiResponseUsers> {
             override fun onResponse(call: Call<ApiResponseUsers>, response: Response<ApiResponseUsers>) {
                 val user = response.body()?.user
-                println(user)
+                if (user != null) {
+                    println(user.id)
+                    println(user.name)
+                    println(user.phone)
+                    println(user.username)
+                    println(user.profilePhoto)
+                }
             }
 
             override fun onFailure(call: Call<ApiResponseUsers>, t: Throwable) {

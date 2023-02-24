@@ -22,14 +22,30 @@
         android:text="Enter a valid phone number to get an OTP code"
         android:textAlignment="center" />
 
-    <EditText
-        android:id="@+id/phone_regist"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginTop="38dp"
-        android:hint="+62 | Enter your phone number"
-        android:inputType="text"
-        android:background="@drawable/boxtext"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp">
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:hint="+62"
+            android:gravity="center"
+            android:background="@drawable/boxtext"
+            android:enabled="false"/>
+
+        <EditText
+            android:id="@+id/phone_regist"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="  Enter your phone number"
+            android:inputType="text"
+            android:background="@drawable/boxtext"/>
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/OTP_button"
@@ -41,13 +57,12 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        >
+        android:layout_marginTop="45dp">
 
         <TextView
             android:id="@+id/when_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
             android:textAlignment="center"
             android:text="When login, you will agree to the ...  Service Terms &amp; acknowledge
 that our Privacy Notice applies."/>
