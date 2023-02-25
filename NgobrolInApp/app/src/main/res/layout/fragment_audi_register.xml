@@ -1,97 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:layout_margin="16dp"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".ui.login.AudiRegisterFragment">
+    android:background="@color/white"
+    tools:context=".ui.login.AudiLoginFragment">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register Account"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="25sp"/>
-
-    <TextView
+        android:id="@+id/title_register_audience"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
+        android:text="Register Audience"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrowleft"
+        android:layout_alignParentBottom="@+id/title_register_audience"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/title_description_audience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
         android:textSize="13sp"
+        android:layout_below="@+id/title_register_audience"
         android:text="Enter a valid phone number to get an OTP code"
         android:textAlignment="center" />
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="50dp">
-
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
         <EditText
-            android:layout_width="50dp"
-            android:layout_height="55dp"
-            android:hint="+62"
-            android:gravity="center"
-            android:background="@drawable/boxtext"
-            android:enabled="false"/>
-
-        <EditText
-            android:id="@+id/phone_regist"
+            android:id="@+id/phone_register_audience"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:hint="  Enter your phone number"
+            android:layout_below="@+id/title_description_audience"
+            android:hint=" +62 | Enter your phone number"
             android:inputType="text"
             android:background="@drawable/boxtext"/>
 
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="9dp"
+            android:text="Send OTP"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/yellow"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end">
+
+        </LinearLayout>
+
     </LinearLayout>
 
 
-    <Button
-        android:id="@+id/OTP_button"
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginTop="9dp"
-        android:text="SEND OTP" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp">
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/when_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="When login, you will agree to the ...  Service Terms &amp; acknowledge
-that our Privacy Notice applies."/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        >
-
-        <TextView
-            android:id="@+id/already_have_account"
+            android:id="@+id/when_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:textStyle="bold"
-            android:text="Already have an account yet?"/>
+            android:text="When register, you will agree to the ...  Service Terms &amp; acknowledge
+that our Privacy Notice applies."
+            android:textAlignment="center" />
 
-        <TextView
-            android:id="@+id/login_here"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:layout_marginLeft="2sp"
-            android:layout_alignEnd="@+id/already_have_account"
-            android:textStyle="bold"
-            android:text="Login Here" />
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:id="@+id/alredy_have_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Don’t have an account yet?"/>
+
+            <TextView
+                android:id="@+id/Login_here"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2sp"
+                android:layout_alignEnd="@+id/alredy_have_account"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:text="Login here" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
-</LinearLayout>
+
+</RelativeLayout>
