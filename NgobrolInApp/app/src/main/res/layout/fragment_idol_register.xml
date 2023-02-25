@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context=".ui.login.AudiLoginFragment">
+
+    <TextView
+        android:id="@+id/title_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register Account"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textAlignment="center"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrowleft"
+        android:layout_alignParentBottom="@+id/title_login"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/title_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:textSize="13sp"
+        android:layout_below="@+id/title_login"
+        android:text="Enter the mobile number and invitation code
+that was previously received"
+        android:textAlignment="center" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+        <EditText
+            android:id="@+id/phone_login"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/title_description"
+            android:hint=" +62 | Enter your phone number"
+            android:inputType="text"
+            android:background="@drawable/boxtext"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="9dp"
+            android:hint="Enter Invitation Code"
+            android:gravity="center"
+            android:inputType="textPassword"
+            android:background="@drawable/boxtext"/>
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="9dp"
+            android:text="Join Now"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/yellow"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end">
+
+            <TextView
+                android:id="@+id/forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+
+                android:text="Don't have the code yet?"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:textSize="13dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/when_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="When login, you will agree to the ...  Service Terms &amp; acknowledge
+that our Privacy Notice applies."
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:id="@+id/dont_have_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Already have an account?"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/register_idol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2sp"
+                android:layout_alignEnd="@+id/dont_have_account"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:text="Register Here" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
