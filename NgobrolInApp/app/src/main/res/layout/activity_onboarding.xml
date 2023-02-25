@@ -1,61 +1,22 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context=".ui.onboarding.OnboardingActivity">
 
-    <ImageView
-        android:id="@+id/background_image"
+    <fragment
+        android:id="@+id/nav_host_fragment_activity_onboarding"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/splash1"
-        android:scaleType="centerCrop"
-        android:alpha="0.7"
-        android:background="#000000\"
-        />
+        app:defaultNavHost="true"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/onboarding_navigation" />
 
-
-    <!-- Onboarding screen title -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="120dp"
-        android:orientation="vertical">
-
-        <!-- Onboarding screen image -->
-
-        <!-- Onboarding screen description -->
-        <TextView
-            android:id="@+id/iv_onboarding_Title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Interaction with Your Idol!"
-            android:textAlignment="center"
-            android:textColor="@color/yellow"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tv_onboarding_description"
-            android:layout_width="270dp"
-            android:layout_height="wrap_content"
-            android:text="Meet with great idols from various profession?
-    Only here is the place"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="12sp"
-            android:layout_marginTop="22dp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/btn_get_started"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/next_button"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        />
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 

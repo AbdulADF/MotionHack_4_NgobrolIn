@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_loginChooseFragment_to_audiLoginFragment"
             app:destination="@id/audiLoginFragment" />
+        <action
+            android:id="@+id/action_loginChooseFragment_to_creatorRegisterFragment"
+            app:destination="@id/creatorRegisterFragment" />
     </fragment>
     <fragment
         android:id="@+id/audiLoginFragment"
@@ -28,4 +31,13 @@
         android:name="com.abduladf.ngobrolin.ui.login.AudiRegisterFragment"
         android:label="fragment_audi_register"
         tools:layout="@layout/fragment_audi_register" />
+    <fragment
+        android:id="@+id/creatorRegisterFragment"
+        android:name="com.abduladf.ngobrolin.ui.login.CreatorRegisterFragment"
+        android:label="fragment_creator_register"
+        tools:layout="@layout/fragment_creator_register" >
+        <action
+            android:id="@+id/action_creatorRegisterFragment_to_loginChooseFragment2"
+            app:destination="@id/loginChooseFragment" />
+    </fragment>
 </navigation>
