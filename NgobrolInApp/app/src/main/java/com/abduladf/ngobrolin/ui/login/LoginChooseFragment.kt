@@ -41,6 +41,9 @@ class LoginChooseFragment : Fragment() {
         binding.audiencebtn.setOnClickListener {
             findNavController().navigate(R.id.action_loginChooseFragment_to_audiLoginFragment)
         }
+        binding.creatorbtn.setOnClickListener {
+            findNavController().navigate(R.id.action_loginChooseFragment_to_creatorRegisterFragment)
+        }
     }
 
 }
