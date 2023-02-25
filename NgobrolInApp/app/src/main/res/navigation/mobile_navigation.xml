@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation.xml"
+    app:startDestination="@id/loginChooseFragment">
+
+    <fragment
+        android:id="@+id/loginChooseFragment"
+        android:name="com.abduladf.ngobrolin.ui.login.LoginChooseFragment"
+        android:label="fragment_login_choose"
+        tools:layout="@layout/fragment_login_choose" >
+        <action
+            android:id="@+id/action_loginChooseFragment_to_audiLoginFragment"
+            app:destination="@id/audiLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/audiLoginFragment"
+        android:name="com.abduladf.ngobrolin.ui.login.AudiLoginFragment"
+        android:label="fragment_audi_login"
+        tools:layout="@layout/fragment_audi_login" >
+        <action
+            android:id="@+id/action_audiLoginFragment_to_audiRegisterFragment"
+            app:destination="@id/audiRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/audiRegisterFragment"
+        android:name="com.abduladf.ngobrolin.ui.login.AudiRegisterFragment"
+        android:label="fragment_audi_register"
+        tools:layout="@layout/fragment_audi_register" />
+</navigation>

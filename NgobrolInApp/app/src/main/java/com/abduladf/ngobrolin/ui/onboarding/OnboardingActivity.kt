@@ -9,6 +9,7 @@ import android.widget.ImageView
 import com.abduladf.ngobrolin.MainActivity
 import com.abduladf.ngobrolin.R
 import com.abduladf.ngobrolin.databinding.ActivityOnboardingBinding
+import com.abduladf.ngobrolin.ui.login.LoginRegisterActivity
 
 class OnboardingActivity : AppCompatActivity() {
 
@@ -18,7 +19,7 @@ class OnboardingActivity : AppCompatActivity() {
 
         val btn = findViewById<ImageView>(R.id.btn_get_started)
         btn.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, LoginRegisterActivity::class.java))
             finish()
         }
     }

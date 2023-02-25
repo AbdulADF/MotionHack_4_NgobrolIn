@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
         dinotisService.getCreators().enqueue(object : Callback<ApiResponseListCreators> {
             override fun onResponse(call: Call<ApiResponseListCreators>, response: Response<ApiResponseListCreators>) {
                 val creators = response.body()?.creators
-                println(creators)
             }
 
             override fun onFailure(call: Call<ApiResponseListCreators>, t: Throwable) {
