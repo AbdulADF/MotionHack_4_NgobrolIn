@@ -34,7 +34,7 @@ class CreatorRegisterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentCreatorRegisterBinding.bind(view)
         binding.arrowback.setOnClickListener {
-            findNavController().navigate(R.id.action_creatorRegisterFragment_to_loginChooseFragment2)
+            findNavController().navigateUp()
         }
     }
 }

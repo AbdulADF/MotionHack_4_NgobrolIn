@@ -30,7 +30,11 @@
         android:id="@+id/audiRegisterFragment"
         android:name="com.abduladf.ngobrolin.ui.login.AudiRegisterFragment"
         android:label="fragment_audi_register"
-        tools:layout="@layout/fragment_audi_register" />
+        tools:layout="@layout/fragment_audi_register" >
+        <action
+            android:id="@+id/action_audiRegisterFragment_to_interestPickFragment"
+            app:destination="@id/interestPickFragment" />
+    </fragment>
     <fragment
         android:id="@+id/creatorRegisterFragment"
         android:name="com.abduladf.ngobrolin.ui.login.CreatorRegisterFragment"
@@ -40,4 +44,9 @@
             android:id="@+id/action_creatorRegisterFragment_to_loginChooseFragment2"
             app:destination="@id/loginChooseFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/interestPickFragment"
+        android:name="com.abduladf.ngobrolin.ui.login.InterestPickFragment"
+        android:label="fragment_interest_pick"
+        tools:layout="@layout/fragment_interest_pick" />
 </navigation>

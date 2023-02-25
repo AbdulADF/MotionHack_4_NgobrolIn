@@ -1,17 +1,16 @@
-package com.abduladf.ngobrolin.ui.login
+package com.abduladf.ngobrolin.ui.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.abduladf.ngobrolin.R
-import com.abduladf.ngobrolin.databinding.FragmentAudiRegisterBinding
+import com.abduladf.ngobrolin.databinding.FragmentFavoriteBinding
 
-class AudiRegisterFragment : Fragment() {
+class FavoriteFragment : Fragment() {
 
-    private var _binding: FragmentAudiRegisterBinding? = null
+    private var _binding: FragmentFavoriteBinding? = null
 
     private val binding get() = _binding!!
 
@@ -24,14 +23,14 @@ class AudiRegisterFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_audi_register, container, false)
+        return inflater.inflate(R.layout.fragment_favorite, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentAudiRegisterBinding.bind(view)
-        binding.loginButton.setOnClickListener {
-            findNavController().navigate(R.id.action_audiRegisterFragment_to_interestPickFragment)
+        _binding = FragmentFavoriteBinding.bind(view)
+        binding.arrowleft.setOnClickListener {
+            requireActivity().onBackPressed()
         }
     }
 

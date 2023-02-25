@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="32dp">
+    android:orientation="vertical"
+    android:layout_margin="32dp"
+    tools:context=".ui.profile.ProfileFragment">
 
     <!-- User profile picture -->
     <RelativeLayout
@@ -17,13 +18,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="Login Account"
+            android:text="Profile"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/arrowleft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/arrowleft"
@@ -85,6 +87,7 @@
             android:textSize="16sp"/>
 
         <TextView
+            android:id="@+id/edit_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -92,6 +95,7 @@
             android:text="Edit Profile"/>
 
         <TextView
+            android:id="@+id/favoriteT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -99,11 +103,12 @@
             android:text="Favorite"/>
 
         <TextView
+            android:id="@+id/change_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="16dp"
-            android:text="Help"/>
+            android:text="Change Password"/>
 
         <TextView
             android:layout_width="match_parent"
