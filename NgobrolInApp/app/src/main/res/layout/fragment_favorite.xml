@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="32dp">
+    android:layout_margin="32dp"
+    tools:context=".ui.profile.FavoriteFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,6 +24,7 @@
             android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/arrowleft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/arrowleft"
@@ -34,6 +37,5 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
         android:src="@drawable/favorite"/>
-
 
 </LinearLayout>

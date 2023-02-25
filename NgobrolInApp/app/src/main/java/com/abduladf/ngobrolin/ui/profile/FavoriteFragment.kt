@@ -1,25 +1,21 @@
-package com.abduladf.ngobrolin.ui.login
+package com.abduladf.ngobrolin.ui.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.abduladf.ngobrolin.R
-import com.abduladf.ngobrolin.databinding.FragmentCreatorRegisterBinding
+import com.abduladf.ngobrolin.databinding.FragmentFavoriteBinding
 
-class CreatorRegisterFragment : Fragment() {
+class FavoriteFragment : Fragment() {
 
-    private var _binding: FragmentCreatorRegisterBinding? = null
+    private var _binding: FragmentFavoriteBinding? = null
 
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-
-        }
     }
 
     override fun onCreateView(
@@ -27,14 +23,15 @@ class CreatorRegisterFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_creator_register, container, false)
+        return inflater.inflate(R.layout.fragment_favorite, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentCreatorRegisterBinding.bind(view)
-        binding.arrowback.setOnClickListener {
-            findNavController().navigateUp()
+        _binding = FragmentFavoriteBinding.bind(view)
+        binding.arrowleft.setOnClickListener {
+            requireActivity().onBackPressed()
         }
     }
+
 }
