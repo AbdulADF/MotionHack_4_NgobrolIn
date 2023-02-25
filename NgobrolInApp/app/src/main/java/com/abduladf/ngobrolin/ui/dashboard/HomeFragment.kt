@@ -32,6 +32,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentHomeBinding.bind(view)
         binding.profile.setOnClickListener {
+            println("click profile")
             startActivity(Intent(requireContext(), ProfileActivity::class.java))
         }
     }
